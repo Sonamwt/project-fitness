@@ -1,12 +1,30 @@
-<h1>Dashboard</h1>
-<p>Welcome, {{ user.username }}</p>
-<a href="{% url 'logout' %}">Logout</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Fitness Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Fitness Tracker</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="login.html">Logout</a>
+    </nav>
+  </header>
 
-<h2>Your Workouts</h2>
-<ul>
-    {% for workout in workouts %}
-        <li>{{ workout.date }} - {{ workout.activity }} ({{ workout.duration }} mins, {{ workout.calories_burned }} cal)</li>
-    {% empty %}
-        <li>No workouts yet.</li>
-    {% endfor %}
-</ul>
+  <main>
+    <h1>Welcome to your Dashboard!</h1>
+    <p>Track your workouts, nutrition, and progress here.</p>
+
+    <div>
+      <a href="#" class="button">Add Workout</a>
+      <a href="#" class="button">View Progress</a>
+      <a href="#" class="button">Update Profile</a>
+    </div>
+  </main>
+</body>
+</html>
+
